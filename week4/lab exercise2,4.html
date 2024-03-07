@@ -6,15 +6,15 @@
     </head>
 
     <body>
-        <form name="newform">
-        <fieldset>
-            <legend style="color: aqua;font-size:24px; font-weight:bold ">Personal Information</legend>
+        <form name="newform" oninput="education_output.value=parseInt(education.value)">
+        <fieldset style="background-color: #D3D3D3; border:cornsilk; font-family:Verdana, Geneva, Tahoma, sans-serif " >
+            <legend style="color: rgb(64, 0, 255);font-size:24px; font-weight:bold ">Personal Information</legend>
             <datalist id="trungandata">
                 <option label="Mr" value="Mister" >
                 <option label="Mrs" value="Mistress">
                 <option label="Ms" value="Miss">    
             </datalist>
-            <table width="500" border="0" align="center">
+            <table width="500" border="01" align="center" >
                 <tr>
                     <td width="160">Title :</td>
                     <td width="550"><input type="text" list="trungandata" size="20"></td>
@@ -34,8 +34,8 @@
                 </tr>
                 <tr>
                     <td width="160">Education :</td>
-                    <td>0 <input type="range" name="range_control" min="0" max="12" value="0" >
-                    <output for="range_control" name="range_control_value">12</output> </td>
+                    <td>0 <input id="education" type="range" name="education" min="0" max="12" value="0" >12 →
+                        <output name="education_output">0</output> </td>
                 </tr>
                 <tr>
                     <td width="160">Email :</td>
@@ -54,7 +54,7 @@
                     <td width="550"><input type="tel" name="tel_control" ></td>
                 </tr>
                 <tr>
-                    <td width="160">Favourite color :</td>
+                    <td width="200">Favourite color :</td>
                     <td width="550"><input type="color" name="color_control"></td>
                 </tr>
                 <tr>
